@@ -1,5 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 main {
-  display: flex;
   padding-top: 30px;
   width: 100%;
   align-items: center;
@@ -43,14 +48,24 @@ main {
 .header{
   display: flex;
   width: 100%;
-  max-width: 1260px;
+  /* max-width: 1260px; */
   height: 72px;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  border: 2px solid red;
 }
 
+.logo-avanti{
+  display: flex;
+  padding-right: 60px;
+  /* padding-left: 60px; */
+}
 
+.search-field{
+  position: relative;
+
+}
 
 .input-search {
   width: 594px;
@@ -61,6 +76,26 @@ main {
   border-radius: 10px;
   padding: 0 16px;
   border: 1px solid #DDDDDD;
+  font-size: 14px;
+}
+
+.search-submit {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%); 
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-icon {
+  font-size: 24px;
 }
 
 .container-cart-and-user-button{
@@ -70,6 +105,13 @@ main {
   flex-direction: row;
   padding: 0 20px;
 }
+
+.container-cart-and-user-button ion-icon{
+  color: #005CFF;
+
+}
+
+
 
 .btn-user{
   display: flex;
@@ -81,9 +123,13 @@ main {
   gap: 8px;
   border: none;
   background: transparent;
+  font-size: 14px;
+  font-weight: 600;
 }
 
+
 .btn-cart {
+  position: relative;
   width: 24px;
   height: 24px;
   background:transparent;
@@ -92,16 +138,69 @@ main {
 
 .btn-cart span{
   position: absolute;
+  top: -8px; /* sobe um pouco */
+  right: -16px; /* joga pra fora à direita */
   display: flex;
-  margin-top: -20px;
-  width: 10px;
-  height: 10px;
-  padding: 4px;
   justify-content: center;
   align-items: center;
-  color: white;
+  width: 21px;
+  height: 21px;
+  font-size: 10px;
   font-weight: 700;
   background: red;
-  border: none;
-  border-radius: 100%;
+  color: white;
+  border-radius: 50%;}
+
+.btn-cart ion-icon{
+  color: black;
+  font-size: 24px;
+}
+
+
+.navbar {
+  display: flex;
+  width: 100%;
+  /* max-width: 1260px; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  border: 2px solid blue;
+  padding-top: 23px;
+}
+
+.footer-link{
+  font: 14px;
+  font-weight: 400;
+  color:black;
+  text-decoration: none;
+}
+
+.navbar-all-categories{
+  display: flex;
+}
+
+.navbar-all-categories ion-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  size: 14px;
+  
+}
+
+.navbar-list-items{
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  max-width: 1260px;
+  list-style: none;
+}
+
+
+
+.navbar-all-categories ion-icon {
+  display: flex;
+  font-size: 14px;
 }
