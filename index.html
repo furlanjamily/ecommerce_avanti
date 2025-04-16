@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- google font link -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Importação dos icons -->
-
+    <!-- Ícones Ionicons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -22,6 +21,22 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
+    <!-- Swiper.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>Avanti</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -30,9 +45,9 @@
       <div class="alert">
         <span class="span-normal">Ganhe</span>
         <span class="span-price-discount">R$10,00</span>
-        <span class="span-normal"
-          >de desconto no seu primeiro pedido. Utilize o cupom</span
-        >
+        <span class="span-normal">
+          de desconto no seu primeiro pedido. Utilize o cupom
+        </span>
         <span class="span-cupom-discount">DESCONTO10</span>
       </div>
 
@@ -56,11 +71,10 @@
         <div class="container-cart-and-user-button">
           <button class="btn-user">
             <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-
-            <span
-              >Olá,<br />
-              Nome cliente!</span
-            >
+            <span>
+              Olá,<br />
+              Nome cliente!
+            </span>
           </button>
 
           <button class="btn-cart">
@@ -78,41 +92,44 @@
               <p class="all-categories-text">Todas as categorias</p>
             </div>
           </li>
-
-          <li>
-            <a href="#" class="footer-link">Departamento</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Departamento</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Departamento</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Departamento</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Departamento</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Departamento</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Departamento</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Departamento</a>
-          </li>
-
+          <li><a href="#" class="footer-link">Departamento</a></li>
+          <li><a href="#" class="footer-link">Departamento</a></li>
+          <li><a href="#" class="footer-link">Departamento</a></li>
+          <li><a href="#" class="footer-link">Departamento</a></li>
+          <li><a href="#" class="footer-link">Departamento</a></li>
+          <li><a href="#" class="footer-link">Departamento</a></li>
+          <li><a href="#" class="footer-link">Departamento</a></li>
+          <li><a href="#" class="footer-link">Departamento</a></li>
         </ul>
       </div>
+
+      <div class="img-banner">
+        <img src="./assets/img-banner.png" alt="Banner fundo" class="img-bg" />
+        <img src="./assets/img-banner1.png" alt="Banner 1" class="img-top img-1" />
+        <img src="./assets/img-banner2.png" alt="Banner 2" class="img-top img-2" />
+
+      </div>
+
+      <!-- Carrossel de lançamentos -->
+      <div class="carrousel">
+        <div class="launch-product">
+          <div class="title">
+            <h1>Lançamentos</h1>
+          </div>
+
+          <div class="swiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+              <!-- Slides inseridos via slider.js -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <!-- Arquivo JS com os slides -->
+    <script src="./js/slider.js" type="module"></script>
   </body>
 </html>
