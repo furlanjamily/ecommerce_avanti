@@ -1,9 +1,11 @@
-const wrapper = document.getElementById('swiper-wrapper');
+const wrapper = document.getElementById("swiper-wrapper");
 
-// Gera conteúdo do produto
 function createProductHTML() {
   return `
     <div class="product-item">
+    <div class="new-product"> 
+    <p>NOVO</p>
+    </div>
       <div class="product-img">
         <img src="./../assets/imgCarrosel.png" alt="Imagem Demonstrativa" />
       </div>
@@ -32,11 +34,11 @@ const totalSlides = 3;
 const productsPerSlide = 5;
 
 for (let i = 0; i < totalSlides; i++) {
-  const slide = document.createElement('div');
-  slide.className = 'swiper-slide';
+  const slide = document.createElement("div");
+  slide.className = "swiper-slide";
 
-  const group = document.createElement('div');
-  group.className = 'product-group';
+  const group = document.createElement("div");
+  group.className = "product-group";
 
   for (let j = 0; j < productsPerSlide; j++) {
     group.innerHTML += createProductHTML();
@@ -47,16 +49,16 @@ for (let i = 0; i < totalSlides; i++) {
 }
 
 // Inicializa Swiper
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 16,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: true,
   },
 });

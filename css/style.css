@@ -273,9 +273,11 @@ ion-icon {
 }
 
 .swiper {
+  position: relative;
   width: 100%;
   overflow:hidden; 
   padding: 0 16px; 
+  padding-bottom: 40px;
   box-sizing: border-box;
   background: #5EC0BE;
 }
@@ -289,10 +291,29 @@ ion-icon {
   background: #303030;
 }
 
+.new-product{
+  display: flex;
+  width: 41px;
+  height: 22px;
+  padding-top: 7px;
+  padding-left: 8px;
+
+}
+
+.new-product p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 4px;
+  background: #00264E;
+  color: white;
+  padding: 1px 6px; /* <-- aqui é o padding */
+}
 
 .product-img {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 222px;
     height: 222px; 
@@ -318,7 +339,7 @@ ion-icon {
   .price-discount-line {
     display: flex;
     align-items: flex-start;
-    gap: 8px; /* espaço entre os blocos de preço e desconto */
+    gap: 8px;
   }
   
   .prices {
@@ -380,67 +401,30 @@ ion-icon {
     cursor: pointer;
   }
   
-  
 
-  /* .swiper-button-prev,
-  .swiper-button-next {
-    background-color: #fff;
-    width: 30px;
-    height: 30px;
-    color: #3758f9;
-    border: 1px solid #f9fafb;
-    border-radius: 100%;
-    box-shadow: 0px 0px 20px rgba(92, 115, 160, 0.2);
-    top: 40%;
-  }
-  
-  .swiper-button-prev::after {
-    content: '\f104';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    font-size: 16px;
-  }
-  
-  .swiper-button-next::after {
-    content: '\f105';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    font-size: 16px;
-  }
-  
-  .swiper-pagination-bullet {
-    background: #ccc;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background: #3758f9;
-  } */
-
-  /* Botões do Swiper centralizados de acordo com a largura de 1182px */
 .swiper-button-prev,
 .swiper-button-next {
   background-color: #fff;
   width: 30px;
   height: 30px;
-  color: #3758f9;
+  color: #303030;
   border: 1px solid #f9fafb;
   border-radius: 100%;
-  box-shadow: 0px 0px 20px rgba(92, 115, 160, 0.2);
+  box-shadow: 0px 0px 20px #838383;
   top: 40%;
   position: absolute;
   z-index: 10;
 }
 
-/* Alinhamento lateral baseado na largura do conteúdo */
 .swiper-button-prev {
-  left: calc((100% - 1182px) / 2 - 20px); /* botão à esquerda do conteúdo */
+  left: calc((100% - 1182px) / 2 - 20px); 
 }
 
 .swiper-button-next {
-  right: calc((100% - 1182px) / 2 - 20px); /* botão à direita do conteúdo */
+  right: calc((100% - 1182px) / 2 - 20px); 
 }
 
-/* Ícones personalizados com Font Awesome */
+
 .swiper-button-prev::after {
   content: '\f104';
   font-family: 'Font Awesome 5 Free';
@@ -454,6 +438,28 @@ ion-icon {
   font-weight: 900;
   font-size: 16px;
 }
+
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Deixa as bolinhas mais bonitinhas (opcional) */
+.swiper-pagination-bullet {
+  background-color: #d1d5db;
+  opacity: 1;
+  margin: 0 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #303030; 
+}
+
 
 
   .product-group {
