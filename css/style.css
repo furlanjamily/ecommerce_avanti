@@ -483,7 +483,130 @@ ion-icon {
   }
 
 
+  .product-description {
+    display: flex;
+    align-items: center;
+    gap: 37.5px; /* Espaço entre imagem e texto */
+    max-width: 1177px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Responsivo: quebra linha se necessário */
+    padding-bottom: 55px;
+  }
 
-
-
-
+  
+  
+  .product-description .img img {
+    width: 520px;
+    height: 520px;
+    object-fit: cover;
+    background: #C2C2C2;
+  }
+  
+  .product-description .text {
+    flex: 1;
+  }
+  
+  .product-description .text span {
+    font-weight: 700;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 22px;
+  }
+  
+  .product-description .text p {
+    font-size: 18px;
+    margin-bottom: 22px;
+    font-weight: 400;
+  }
+  
+  .product-description-2 {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-description-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-img {
+    display: flex;
+    width: 1177px;
+    height: 728px;
+    gap: 49px;
+  }
+  
+  .text-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .product-title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .product-title span {
+    font-size: 30px;
+    font-weight: 700;
+    display: inline-block;
+    color: #4F4F4F;
+    text-transform: uppercase;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .icon-text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+  }
+  
+  .Icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .text p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 400;
+    color: #4f4f4f;
+  }
+  
+  .image-wrapper {
+    flex: 1;
+    max-width: 652px;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    padding-top: 41px;
+    object-fit: cover;
+  }
+  
