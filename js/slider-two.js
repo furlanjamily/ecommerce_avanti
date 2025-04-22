@@ -1,6 +1,6 @@
-const wrapper = document.getElementById("swiper-wrapper-two");
+const wrapperTwo = document.getElementById("swiper-wrapper-two");
 
-function createProductHTML() {
+function createProductHTMLTwo() {
   return `
     <div class="product-item">
       <div class="new-product"> 
@@ -30,30 +30,26 @@ function createProductHTML() {
   `;
 }
 
-function createSlide() {
+const totalSlidesTwo = 3;
+const productsPerSlideTwo = 5;
+
+for (let i = 0; i < totalSlidesTwo; i++) {
   const slide = document.createElement("div");
-  slide.className = "swiper-slide";
+  slide.className = "swiper-slide"; // ❗ NÃO personalize essa classe – o Swiper exige "swiper-slide"
 
   const group = document.createElement("div");
-  group.className = "product-group";
+  group.className = "product-group"; // pode customizar se quiser, mas mantenha a estrutura
 
-  for (let j = 0; j < 5; j++) {
-    group.innerHTML += createProductHTML();
+  for (let j = 0; j < productsPerSlideTwo; j++) {
+    group.innerHTML += createProductHTMLTwo();
   }
 
   slide.appendChild(group);
-  return slide;
+  wrapperTwo.appendChild(slide);
 }
 
-
-const singleSlide = createSlide();
-
-
-wrapper.appendChild(singleSlide.cloneNode(true));
-wrapper.appendChild(singleSlide.cloneNode(true));
-
-
-const swiper = new Swiper(".swiper", {
+// Inicializa Swiper isolado
+const swiperTwo = new Swiper(".swiper-two", {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 16,

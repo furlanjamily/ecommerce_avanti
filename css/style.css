@@ -244,7 +244,6 @@ ion-icon {
 .carrousel{
   display: flex;
   padding-top: 96px;
-  padding-bottom: 96px;
   background: #6220C1;
 }
 
@@ -450,7 +449,7 @@ ion-icon {
 .swiper-pagination-bullet {
   background-color: #d1d5db;
   opacity: 1;
-  margin: 0 5px;
+  margin: 16 0px;
   width: 7px;
   height: 7px;
   border-radius: 100%;
@@ -490,7 +489,8 @@ ion-icon {
     max-width: 1177px;
     margin: 0 auto;
     flex-wrap: wrap; /* Responsivo: quebra linha se necessário */
-    padding-bottom: 55px;
+    padding-top: 55px;
+    padding-bottom: 96px;
   }
 
   
@@ -609,4 +609,158 @@ ion-icon {
     padding-top: 41px;
     object-fit: cover;
   }
+
+  .banner {
+    width: 100%;
+    height: 478px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  
+  .register {
+    max-width: 1260px;
+    margin: 135px; 
+    justify-items: center;/* margem de 60px entre o banner e o register */
+    align-items: center;
+  }
+  
+  .register h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    size: 20px;
+    font-weight: 700;
+  }
+  
+  .register h2 span {
+    color: #005CFF;
+  }
+  
+  .register form {
+    display: flex;
+    background: #DEDEDE;
+    padding: 64px;
+    
+    border-radius: 8px;
+    gap: 24px;
+  }
+  
+  .register input[type="text"],
+  .register input[type="email"]
+   {
+    width: 280px;
+    height: 48px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .register button{
+    width: 121px;
+    height: 48px;
+    background: #005CFF;
+    color: white;
+    border-radius: 8px;
+
+  }
+  
+  .register .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+  
+  .register .checkbox-container a {
+    text-decoration: underline;
+  }
+  
+  .register button {
+    background-color: #005CFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .register button:hover {
+    background-color: #0040b3;
+    color: white;
+
+  }
+
+
+  .footer {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+  }
+  
+  .logo-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 200px;
+  }
+  
+  .logo-footer {
+    width: 152px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 40px;
+    font-size: 26px;
+    color: #005CFF;
+  }
+  
+  .footer-list-items,
+  .footer-list-items-two,
+  .footer-list-items-three {
+    list-style: none;
+    padding: 0;
+    min-width: 180px;
+  }
+  
+  .all-categories-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: #333;
+    margin: 5px 0;
+    display: block;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #7e61e7;
+  }
+  
+  .payment-container {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .payment-method {
+    max-width: 300px;
+    width: 100%;
+  }
+    
   
