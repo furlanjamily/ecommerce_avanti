@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Ícones Ionicons -->
+    <!-- Ionicons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -21,12 +22,15 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <!-- Swiper.js -->
+    <!-- Swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
 
     <!-- Font Awesome -->
     <link
@@ -37,26 +41,22 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Font Swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <title>Avanti</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main>
+      <!-- Alerta de desconto -->
       <div class="alert">
-        <span class="span-normal">Ganhe</span>
-        <span class="span-price-discount">R$10,00</span>
-        <span class="span-normal">
+        <span>Ganhe</span>
+        <span class="price-discount">R$10,00</span>
+        <span>
           de desconto no seu primeiro pedido. Utilize o cupom
         </span>
-        <span class="span-cupom-discount">DESCONTO10</span>
+        <span class="cupom-discount">DESCONTO10</span>
       </div>
 
+      <!-- Cabeçalho -->
       <div class="header">
         <div class="logo-avanti">
           <img src="./assets/logoAvanti.png" alt="Logo" />
@@ -90,12 +90,13 @@
         </div>
       </div>
 
+      <!-- Navegação -->
       <div class="navbar">
-        <ul class="navbar-list-items">
+        <ul class="list-items">
           <li>
-            <div class="navbar-all-categories">
+            <div class="all-categories">
               <ion-icon name="menu-outline"></ion-icon>
-              <p class="all-categories-text">Todas as categorias</p>
+              <p>Todas as categorias</p>
             </div>
           </li>
           <li><a href="#" class="footer-link">Departamento</a></li>
@@ -109,38 +110,40 @@
         </ul>
       </div>
 
+      <!-- Banner -->
       <div class="img-banner">
-        <img src="./assets/img-banner.png" alt="Banner fundo" class="img-bg" />
+        <img src="./assets/img-banner.png" alt="Imagem de fundo acinzentada" class="img-bg" />
         <img
           src="./assets/img-banner1.png"
-          alt="Banner 1"
+          alt="Cadeira Branca com uma pilha de roupa"
           class="img-top img-1"
         />
         <img
           src="./assets/img-banner2.png"
-          alt="Banner 2"
+          alt="Texto de oferta"
           class="img-top img-2"
         />
       </div>
 
-      <!-- Carrossel de lançamentos -->
+      <!-- Carrossel de lançamentos 
       <div class="carrousel">
         <div class="launch-product">
           <div class="title">
             <h1>Lançamentos</h1>
-          </div>
+          </div>-->
 
-          <div class="swiper">
+          <!-- <div class="swiper">
             <div class="swiper-wrapper" id="swiper-wrapper">
-              <!-- Slides inseridos via slider.js -->
+              Slides inseridos via slider.js 
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
         </div>
-      </div>
+      </div>-->
 
+      <!-- Descrição de produto  -->
       <div class="product-description">
         <div class="img">
           <img
@@ -172,11 +175,12 @@
         </div>
       </div>
 
-      <div class="product-description-2">
-        <div class="product-description-content">
+      <!-- Descrição de Produto 2 -->
+      <div class="product-description-two">
+        <div class="content">
           <div class="text-img">
             <div class="text-wrapper">
-              <div class="product-title">
+              <div class="title">
                 <span>LOREM IPSUM</span>
               </div>
 
@@ -233,6 +237,7 @@
         </div>
       </div>
 
+      <!-- Descrição de Porduto 1 (duplicado) -->
       <div class="product-description">
         <div class="img">
           <img
@@ -264,24 +269,25 @@
         </div>
       </div>
 
-      <!-- Carrossel de lançamentos -->
+      <!-- Carrossel de lançamentos Duplicado 
       <div class="carrousel">
         <div class="launch-product">
           <div class="title">
             <h1>Lançamentos</h1>
-          </div>
+          </div>-->
 
-          <div class="swiper">
+          <!--<div class="swiper">
             <div class="swiper-wrapper" id="swiper-wrapper-two">
-              <!-- Slides inseridos via JS -->
+               Slides inseridos via JS (Do arquivo "duplicado two") 
             </div>
             <div class="swiper-pagination swiper-pagination-two"></div>
             <div class="swiper-button-prev swiper-button-prev-two"></div>
             <div class="swiper-button-next swiper-button-next-two"></div>
           </div>
         </div>
-      </div>
+      </div>-->
 
+      <!-- Banner Dois -->
       <div class="banner">
         <img
           src="./assets/banner-avanti.png"
@@ -290,6 +296,7 @@
         />
       </div>
 
+      <!-- Campo de registro -->
       <div class="register">
         <h2>Cadastre-se na nossa <span>newsletter</span></h2>
         <form>
@@ -305,10 +312,15 @@
         </form>
       </div>
 
+      <!-- Footer -->
       <div class="footer">
         <div class="footer-top">
           <div class="logo-icon">
-            <img src="./assets/logo-footer.png" alt="Logo Footer" class="logo-footer" />
+            <img
+              src="./assets/logo-footer.png"
+              alt="Logo Footer"
+              class="logo-footer"
+            />
             <div class="social-icons">
               <ion-icon name="logo-instagram"></ion-icon>
               <ion-icon name="logo-facebook"></ion-icon>
@@ -316,7 +328,7 @@
               <ion-icon name="logo-tiktok"></ion-icon>
             </div>
           </div>
-      
+
           <ul class="footer-list-items">
             <li><h4 class="all-categories-text">Institucional</h4></li>
             <li><a href="#" class="footer-link">Sobre Nós</a></li>
@@ -324,30 +336,64 @@
             <li><a href="#" class="footer-link">Privacidade e Segurança</a></li>
             <li><a href="#" class="footer-link">Termos e Condições</a></li>
           </ul>
-      
+
           <ul class="footer-list-items-two">
-            <li><h4 class="all-categories-text">Central de ajuda</h4></li>
+            <li><h4 class="footer-link-bold">Central de ajuda</h4></li>
             <li><a href="#" class="footer-link">Fale Conosco</a></li>
             <li><a href="#" class="footer-link">Frete e Entrega</a></li>
             <li><a href="#" class="footer-link">Trocas e Devoluções</a></li>
             <li><a href="#" class="footer-link">Formas de Pagamento</a></li>
             <li><a href="#" class="footer-link">FAQ</a></li>
           </ul>
-      
+
           <ul class="footer-list-items-three">
             <li><h4 class="all-categories-text">Atendimento</h4></li>
-            <li><a href="#" class="footer-link">Telefone: (00) 1234-5678</a></li>
-            <li><a href="#" class="footer-link">E-mail: exemplo@exemplo.com.br</a></li>
-            <li><a href="#" class="footer-link">Horário de atendimento: <br> Segunda a Sábado: 07h00 às 23h00 <br> Domingos e Feriados: 07h00 às 21h00</a></li>
+            <li>
+              <a href="#" class="footer-link">Telefone: (00) 1234-5678</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">E-mail: exemplo@exemplo.com.br</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                >Horário de atendimento: <br />
+                Segunda a Sábado: 07h00 às 23h00 <br />
+                Domingos e Feriados: 07h00 às 21h00</a
+              >
+            </li>
           </ul>
         </div>
-      
+
         <div class="payment-container">
-          <img src="./assets/img-payment method.png" alt="Métodos de Pagamento" class="payment-method" />
+          <img
+            src="./assets/img-payment method.png"
+            alt="Métodos de Pagamento"
+            class="payment-method"
+          />
         </div>
       </div>
-      
 
+      <!-- Rodapé -->
+      <div class="rodape">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+          vero eros et accumsan et iusto odio dignissim qui blandit praesent
+          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+
+        <div>
+          <img
+            src="./assets/img-rodape.png"
+            alt="Métodos de Pagamento"
+            class="img-rodape"
+          />
+        </div>
+      </div>
     </main>
 
     <!-- Arquivo JS com os slides -->

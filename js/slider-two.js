@@ -35,10 +35,10 @@ const productsPerSlideTwo = 5;
 
 for (let i = 0; i < totalSlidesTwo; i++) {
   const slide = document.createElement("div");
-  slide.className = "swiper-slide"; // ❗ NÃO personalize essa classe – o Swiper exige "swiper-slide"
+  slide.className = "swiper-slide"; 
 
   const group = document.createElement("div");
-  group.className = "product-group"; // pode customizar se quiser, mas mantenha a estrutura
+  group.className = "product-group"; 
 
   for (let j = 0; j < productsPerSlideTwo; j++) {
     group.innerHTML += createProductHTMLTwo();
