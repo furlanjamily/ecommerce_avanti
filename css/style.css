@@ -190,10 +190,10 @@ ion-icon {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font: 14px;
+  font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
-  padding: 23px; /* revisar*/
+  padding: 23px;
 }
 
 .footer-link {
@@ -217,7 +217,7 @@ ion-icon {
 
 .list-items {
   display: flex;
-  gap: 16px;
+  gap: 45px;
   align-items: center;
   max-width: 1260px;
   list-style: none;
@@ -225,20 +225,9 @@ ion-icon {
 
 /* Banner */
 .img-banner {
-  position: relative;
+  display: flex;
   width: 100%;
-  max-width: max-content;
   height: auto;
-  overflow: hidden;
-  padding-bottom: 96px;
-}
-
-.img-banner-mobile {
-  position: relative;
-  width: 100%;
-  max-width: max-content;
-  height: auto;
-  overflow: hidden;
   padding-bottom: 96px;
 }
 
@@ -247,30 +236,15 @@ ion-icon {
   justify-items: center;
   align-items: center;
   width: 100%;
-  height: 510px;
-  display: block;
-}
-
-.img-top {
-  position: absolute;
-  max-width: 100%;
   height: auto;
 }
 
-.img-1 {
-  top: 0%;
-  left: 0%;
-  width: 500px;
-  height: 510px;
-}
+/* Banner Mobile */
 
-.img-2 {
-  position: absolute;
-  top: 50%;
-  left: 500px;
-  transform: translateY(-50%);
-  width: 576px;
-  height: 224px;
+.img-banner-mobile {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* Carrousel   */
@@ -803,9 +777,78 @@ ion-icon {
 /*  RESPONSIVIDADE GERAL      */
 /* ========================== */
 
+@media (max-width: 425px) {
+  .text-img {
+    flex-direction: column; /* Para garantir que a imagem fique acima ou abaixo no mobile */
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Para esconder a imagem adicional no mobile */
+  .image-wrapper {
+    display: none;
+  }
+
+  /* A imagem principal ficará acima do texto */
+  .image-wrapper-mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-wrapper-mobile img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .text-wrapper {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .product-title span {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .icon-text-wrapper {
+    display: flex;
+    flex-direction: row; /* Garantir que o ícone e o texto fiquem lado a lado */
+    align-items: center; /* Alinha o ícone e o texto na vertical */
+    gap: 10px; /* Ajuste o espaçamento entre o ícone e o texto */
+  }
+
+  .icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .Icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .text p {
+    font-size: 12px;
+    letter-spacing: 5%;
+  }
+}
+
+@media (min-width: 426px) {
+  .image-wrapper-mobile {
+    display: none;
+  }
+}
+
+
+
 @media (max-width: 768px) {
   body {
-    padding-top: 40px; /* altura do alert */
+    padding-top: 40px;
   }
 
   .alert {
@@ -857,29 +900,36 @@ ion-icon {
     display: none;
   }
 
-  .img-banner-mobile {
+  /* Descrição de Produto */
+  .product-description {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .product-description .img img {
+    width: 100%;
+    max-width: 390px;
+    height: 390px;
+    object-fit: contain;
+  }
+
+  .product-description .text {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    gap: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 38px 24px;
+    text-align: left;
   }
 
-  .img-banner-mobile .img-1-mobile {
-    max-width: 225px;
-    max-height: 306px;
-    z-index: 1;
+  .product-description .text span {
+    font-size: 24px;
+    margin-bottom: 18px;
   }
 
-  .img-banner-mobile .img-2-mobile {
-    max-width: 139px;
-    max-height: 164px;
-    margin-left: -30px; /* ajusta a sobreposição */
-    z-index: 2;
-  }
-
-  .img-banner-mobile .img-bg {
-    display: none;
+  .product-description .text p {
+    font-size: 14px;
+    margin-bottom: 16px;
   }
 }
 
@@ -899,3 +949,99 @@ ion-icon {
     display: none;
   }
 }
+
+@media (max-width: 1024px) {
+  .list-items {
+    gap: 15px;
+  }
+
+  .header {
+    max-width: 1024px;
+  }
+
+  .logo-avanti {
+    display: flex;
+    padding-left: 5px;
+    padding-right: 20px;
+  }
+
+  .img-banner {
+    padding-bottom: 48px;
+  }
+
+  /* Descrição de produto (768 a 1024px) */
+
+  .product-description-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .text-img {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    height: auto;
+  }
+
+  .text-wrapper {
+    flex: 1;
+    padding: 0;
+  }
+
+  .product-title {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .product-title span {
+    font-size: 28px;
+  }
+
+  .text {
+    gap: 20px;
+  }
+
+  .icon-text-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .icon-container {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .Icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .text p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .image-wrapper {
+    flex: 1;
+    max-width: 500px;
+    display: block;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding-top: 0;
+  }
+
+  .image-wrapper-mobile {
+    display: none;
+  }
+}
+
+
