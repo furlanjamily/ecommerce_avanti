@@ -760,14 +760,18 @@ ion-icon {
 }
 
 .payment-container {
-  width: 540px;
-  height: 24px;
-  margin-top: 64px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
 }
 
 .payment-method {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow {
+  display: none;
 }
 
 /*Rodapé */
@@ -946,11 +950,12 @@ ion-icon {
 
   /* Campo de Registro */
   .register {
-    margin: 64px auto;
+    margin: 61px auto;
     padding: 0 16px;
   }
 
   .register form {
+    width: 100%;
     flex-direction: column;
     padding: 32px;
     gap: 16px;
@@ -963,15 +968,46 @@ ion-icon {
   }
 
   .register .checkbox-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    flex-direction: row;
+  }
+  /* Footer */
+  .arrow {
+    display: inline-block;
+  }
+
+  /* Oculta os links inicialmente */
+  .footer-list-items li:not(:first-child),
+  .footer-list-items-two li:not(:first-child),
+  .footer-list-items-three li:not(:first-child) {
+    display: none;
+  }
+
+  /* Quando ativo, mostra */
+  .footer-list-items.active li,
+  .footer-list-items-two.active li,
+  .footer-list-items-three.active li {
+    display: block;
+  }
+
+  /* Estiliza a setinha */
+  .arrow {
+    margin-left: 8px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  /* Quando lista ativa, rotaciona seta */
+  .footer-list-items.active .arrow,
+  .footer-list-items-two.active .arrow,
+  .footer-list-items-three.active .arrow {
+    transform: rotate(180deg);
   }
 }
 
 @media (min-width: 1024px) {
   .nav-mobile {
-    visibility: hidden;
+    display: none;
   }
 
   .menu-outline-mobile {
