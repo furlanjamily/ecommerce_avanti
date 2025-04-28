@@ -240,7 +240,6 @@ ion-icon {
 }
 
 /* Banner Mobile */
-
 .img-banner-mobile {
   position: relative;
   width: 100%;
@@ -607,15 +606,22 @@ ion-icon {
   object-fit: cover;
 }
 
-.banner {
-  width: 100%;
-  height: 478px;
-  padding-top: 64px;
-  padding-bottom: 64px;
-}
-
 .image-wrapper-mobile {
   display: none;
+}
+
+/* Banner 2 */
+.banner {
+  width: 100%;
+  padding-bottom: 56px;
+  height: auto;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block; /* tira espaços fantasmas de imagem inline */
 }
 
 /*Campo de Registro */
@@ -877,15 +883,89 @@ ion-icon {
   /* Descrição de Produto 2 */
   .text-img {
     flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 24px;
+    padding: 28px 20px;
+    box-sizing: border-box;
   }
-
   .image-wrapper {
-    display: none; /* esconde imagem desktop */
+    display: none;
   }
 
   .image-wrapper-mobile {
-    display: block; /* mostra imagem mobile */
+    display: block;
+    width: 100%;
     margin-bottom: 20px;
+  }
+
+  .image-wrapper-mobile img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  .text-wrapper {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .product-title span {
+    font-size: 24px;
+  }
+
+  .text {
+    gap: 16px; /* Espaço entre cada item (ícone + texto) */
+  }
+
+  .icon-text-wrapper {
+    display: flex;
+    flex-direction: row; /* mantém ícone do lado do texto */
+    align-items: center;
+    gap: 16px; /* espaço entre ícone e texto (menor no mobile) */
+  }
+
+  .icon-container {
+    width: 60px; /* ícone menor no mobile */
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .Icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .text p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* Campo de Registro */
+  .register {
+    margin: 64px auto;
+    padding: 0 16px;
+  }
+
+  .register form {
+    flex-direction: column;
+    padding: 32px;
+    gap: 16px;
+  }
+
+  .register input[type="text"],
+  .register input[type="email"],
+  .register button {
+    width: 100%; /* ocupa 100% da largura */
+  }
+
+  .register .checkbox-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }
 
