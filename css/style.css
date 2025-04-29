@@ -621,7 +621,7 @@ ion-icon {
   width: 100%;
   height: auto;
   object-fit: cover;
-  display: block; /* tira espaços fantasmas de imagem inline */
+  display: block; 
 }
 
 /*Campo de Registro */
@@ -733,12 +733,10 @@ ion-icon {
   color: #005cff;
 }
 
-.footer-list-items,
-.footer-list-items-two,
-.footer-list-items-three {
+.footer-list-items {
+  align-items: center;
   list-style: none;
   padding: 0;
-  min-width: 180px;
 }
 
 .footer-link-bold {
@@ -762,7 +760,8 @@ ion-icon {
 .payment-container {
   width: 100%;
   display: flex;
-  justify-content: center; /* Centraliza a imagem horizontalmente */
+  padding: 64px;
+  justify-content: center; 
 }
 
 .payment-method {
@@ -778,13 +777,13 @@ ion-icon {
 .rodape {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* centraliza a div em relação à página */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center; /* alinha conteúdo ao centro */
+  align-items: center; 
   background: white;
   padding: 40px;
-  text-align: center; /* centraliza o texto */
+  text-align: center; 
   font-size: 12px;
   font-weight: 400;
 }
@@ -920,18 +919,18 @@ ion-icon {
   }
 
   .text {
-    gap: 16px; /* Espaço entre cada item (ícone + texto) */
+    gap: 16px; 
   }
 
   .icon-text-wrapper {
     display: flex;
-    flex-direction: row; /* mantém ícone do lado do texto */
+    flex-direction: row; 
     align-items: center;
-    gap: 16px; /* espaço entre ícone e texto (menor no mobile) */
+    gap: 16px; 
   }
 
   .icon-container {
-    width: 60px; /* ícone menor no mobile */
+    width: 60px; 
     height: 60px;
     flex-shrink: 0;
   }
@@ -964,32 +963,30 @@ ion-icon {
   .register input[type="text"],
   .register input[type="email"],
   .register button {
-    width: 100%; /* ocupa 100% da largura */
+    width: 100%; 
   }
 
   .register .checkbox-container {
     flex-direction: row;
+    padding-left: 16px;
   }
+
   /* Footer */
   .arrow {
     display: inline-block;
   }
 
   /* Oculta os links inicialmente */
-  .footer-list-items li:not(:first-child),
-  .footer-list-items-two li:not(:first-child),
-  .footer-list-items-three li:not(:first-child) {
+  .footer-list-items li:not(:first-child) {
     display: none;
   }
 
   /* Quando ativo, mostra */
-  .footer-list-items.active li,
-  .footer-list-items-two.active li,
-  .footer-list-items-three.active li {
+  .footer-list-items.active li {
     display: block;
   }
 
-  /* Estiliza a setinha */
+  /* setinha */
   .arrow {
     margin-left: 8px;
     font-size: 14px;
@@ -998,9 +995,7 @@ ion-icon {
   }
 
   /* Quando lista ativa, rotaciona seta */
-  .footer-list-items.active .arrow,
-  .footer-list-items-two.active .arrow,
-  .footer-list-items-three.active .arrow {
+  .footer-list-items.active .arrow {
     transform: rotate(180deg);
   }
 }
@@ -1039,5 +1034,25 @@ ion-icon {
 
   .img-banner {
     padding-bottom: 48px;
+  }
+
+  .footer-top {
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 60px; 
+  }
+
+  /* Carrousel */
+  .product-group {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .product-item {
+    flex: 0 0 45%;
+    max-width: 45%;
   }
 }

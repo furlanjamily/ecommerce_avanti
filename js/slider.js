@@ -3,9 +3,9 @@ const wrapper = document.getElementById("swiper-wrapper");
 function createProductHTML() {
   return `
     <div class="product-item">
-    <div class="new-product"> 
-    <p>NOVO</p>
-    </div>
+      <div class="new-product">
+        <p>NOVO</p>
+      </div>
       <div class="product-img">
         <img src="./../assets/imgCarrosel.png" alt="Imagem Demonstrativa" />
       </div>
@@ -30,8 +30,9 @@ function createProductHTML() {
   `;
 }
 
-const totalSlides = 3;
-const productsPerSlide = 5;
+// 15 produtos no total
+const totalSlides = 3; 
+const productsPerSlide = 5; // 5 produtos por slide em desktop
 
 for (let i = 0; i < totalSlides; i++) {
   const slide = document.createElement("div");
@@ -50,7 +51,7 @@ for (let i = 0; i < totalSlides; i++) {
 
 // Inicializa Swiper
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 1,
+  slidesPerView: 1, // 1 grupo por vez
   loop: true,
   spaceBetween: 16,
   navigation: {
