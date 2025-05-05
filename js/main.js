@@ -1,39 +1,76 @@
-async function loadComponent(id, file) {
-  const res = await fetch(file);
-  const content = await res.text();
-  document.getElementById(id).innerHTML = content;
+const wrapper = document.getElementById("swiper-wrapper");
+const totalProducts = 15;
+
+function getProductsPerSlide() {
+  const width = window.innerWidth;
+  if (width >= 1280) return 5;   // Para telas grandes (Desktop)
+  if (width >= 1024) return 3;   // Para telas médias
+  if (width >= 768) return 2;    // Para tablets
+  if (width >= 640) return 2;    // Para smartphones grandes
+  return 1;                      // Para smartphones pequenos
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  loadComponent("header", "components/header.html");
-  loadComponent("footer", "components/footer.html");
-  loadComponent("products", "components/product-card.html");
+function createProductHTML() {
+  return `
+    <div class="product-item">
+      <div class="new-product"><p>NOVO</p></div>
+      <div class="product-img">
+        <img src="./../assets/imgCarrosel.png" alt="Imagem Demonstrativa" />
+      </div>
+      <div class="product-info">
+        <div class="price-discount-line">
+          <div class="prices">
+            <p class="old-price">R$ 100,00</p>
+            <p class="new-price">R$79,90</p>
+          </div>
+          <div class="discount"><p>10% off</p></div>
+        </div>
+        <div class="installments">
+          <p>Ou em até 10x de R$ 7,90</p>
+        </div>
+      </div>
+      <div class="div-button-buy">
+        <button class="button-buy">Comprar</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderSlides() {
+  wrapper.innerHTML = "";
+  const productsPerSlide = getProductsPerSlide();
+  const totalSlides = Math.ceil(totalProducts / productsPerSlide);  // Garante que sempre teremos a quantidade correta de slides
+
+  let currentProductIndex = 0;
+  for (let i = 0; i < totalSlides; i++) {
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide");
+
+    for (let j = 0; j < productsPerSlide && currentProductIndex < totalProducts; j++) {
+      slide.innerHTML += createProductHTML();
+      currentProductIndex++;
+    }
+
+    wrapper.appendChild(slide);
+  }
+}
+
+renderSlides();
+
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 1, // sempre 1 slide por vez, o conteúdo dentro muda
+  loop: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const titles = document.querySelectorAll(".footer-link-bold");
-
-  titles.forEach((title) => {
-    title.addEventListener("click", function () {
-      // Só ativar no mobile
-      if (window.innerWidth <= 768) {
-        const parentList = this.parentElement.parentElement;
-
-        // Se já estiver ativo, fecha
-        if (parentList.classList.contains("active")) {
-          parentList.classList.remove("active");
-        } else {
-          // Fecha todas antes
-          document
-            .querySelectorAll(
-              ".footer-list-items, .footer-list-items-two, .footer-list-items-three"
-            )
-            .forEach((list) => list.classList.remove("active"));
-
-          parentList.classList.add("active");
-        }
-      }
-    });
-  });
+window.addEventListener("resize", () => {
+  renderSlides();
+  swiper.update();
 });
-
