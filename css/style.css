@@ -264,21 +264,22 @@ ion-icon {
 
 .title {
   width: 100%;
-  display: flex; /* necessário para o justify-between funcionar */
+  display: flex; 
   justify-content: space-between;
-  align-items: center; /* alinha verticalmente no centro */
+  align-items: center; /
 }
 
 .title h1 {
   font-size: 20px;
   font-weight: 700;
   text-align: left;
-  margin: 0; /* remove espaço extra padrão */
+  margin: 0; 
 }
 
 .see-more {
   display: flex;
   align-items: center;
+  text-decoration: none;
   font-size: 14px;
   font-weight: 700;
   color: #303030;
