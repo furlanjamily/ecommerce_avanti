@@ -277,7 +277,6 @@ ion-icon {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 0 16px;
   padding-bottom: 40px;
   box-sizing: border-box;
 }
@@ -313,8 +312,6 @@ ion-icon {
 .product-img {
   display: flex;
   align-items: center;
-  width: 222px;
-  height: 222px;
   overflow: hidden;
   padding-top: 6px;
   padding-left: 8px;
@@ -322,7 +319,8 @@ ion-icon {
 }
 
 .product-img img {
-  width: 100%;
+  width: 222px;
+  height: 222px;
   height: auto;
   object-fit: contain;
   object-position: center;
@@ -397,8 +395,13 @@ ion-icon {
   cursor: pointer;
 }
 
+/* Posicionamento das setas de navegação */
 .swiper-button-prev,
 .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
   background-color: #fff;
   width: 30px;
   height: 30px;
@@ -406,18 +409,19 @@ ion-icon {
   border: 1px solid #005cff;
   border-radius: 100%;
   box-shadow: 0px 0px 20px #005cff;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
 }
 
+/* Alinhar a seta anterior ao início da .product-group */
 .swiper-button-prev {
-  left: 10px;
+  left: 0px;
+  margin-left: 110px;
 }
 
+/* Alinhar a seta próxima ao final da .product-group */
 .swiper-button-next {
-  right: 10px;
+  right: 0px;
+  margin-right: 110px;
+
 }
 
 .swiper-button-prev::after {
@@ -433,13 +437,6 @@ ion-icon {
   font-weight: 900;
   font-size: 16px;
 }
-/* .product-group {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 16px;
-  overflow: hidden;
-  justify-content: space-between;
-} */
 
 .swiper-slide {
   display: flex;
@@ -450,7 +447,9 @@ ion-icon {
 .product-item {
   flex: 0 0 auto;
   width: 100%;
-  max-width: 200px;
+  max-width: 238px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
 }
 
 /* Descrição de Produto*/
@@ -980,8 +979,6 @@ ion-icon {
   .footer-list-items.active .arrow {
     transform: rotate(180deg);
   }
-
-  /* Carrousel */
 }
 
 @media (min-width: 1024px) {
@@ -1001,6 +998,25 @@ ion-icon {
   }
 }
 
+@media (max-width: 1024px) {
+  /* Ajuste Navbar - Tablet */
+  .list-items {
+    gap: 15px;
+  }
+
+  /* Ajuste - Tablet */
+  .header {
+    padding: 0 20px;
+  }
+
+  .logo-avanti {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Carrousel Responsive */
 @media (min-width: 640px) {
   .product-item {
     width: calc(50% - 8px); /* 2 por linha */

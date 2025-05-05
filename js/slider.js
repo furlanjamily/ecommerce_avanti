@@ -4,8 +4,8 @@ const totalProducts = 15;
 function getProductsPerSlide() {
   const width = window.innerWidth;
   if (width >= 1280) return 5;   // Para telas grandes (Desktop)
-  if (width >= 1024) return 4;   // Para telas médias
-  if (width >= 768) return 3;    // Para tablets
+  if (width >= 1024) return 3;   // Para telas médias
+  if (width >= 768) return 2;    // Para tablets
   if (width >= 640) return 2;    // Para smartphones grandes
   return 1;                      // Para smartphones pequenos
 }
