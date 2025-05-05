@@ -263,21 +263,25 @@ ion-icon {
 }
 
 .title {
-  max-width: 1182px;
+  width: 100%;
+  display: flex; /* necessário para o justify-between funcionar */
   justify-content: space-between;
-  justify-items: flex-start;
-  background: red;
+  align-items: center; /* alinha verticalmente no centro */
 }
 
 .title h1 {
   font-size: 20px;
   font-weight: 700;
   text-align: left;
-  width: 100%;
+  margin: 0; /* remove espaço extra padrão */
 }
 
-.see-more{
-  
+.see-more {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #303030;
 }
 
 .swiper {
@@ -417,19 +421,6 @@ ion-icon {
   border-radius: 100%;
   box-shadow: 0px 0px 20px #005cff;
 }
-
-/* Alinhar a seta anterior ao início dos produtos*/
-.swiper-button-prev {
-  left: 0px;
-  margin-left: 110px;
-}
-
-/* Alinhar a seta próxima ao final dos produtos */
-.swiper-button-next {
-  right: 0px;
-  margin-right: 110px;
-}
-
 .swiper-button-prev::after {
   content: "\f104";
   font-family: "Font Awesome 5 Free";
@@ -1005,12 +996,12 @@ ion-icon {
 }
 
 @media (max-width: 1024px) {
-  /* Ajuste Navbar - Tablet */
+  /* Adjust Navbar - Tablet */
   .list-items {
     gap: 15px;
   }
 
-  /* Ajuste - Tablet */
+  /* Adjust Header- Tablet */
   .header {
     padding: 0 20px;
   }
@@ -1022,7 +1013,7 @@ ion-icon {
   }
 }
 
-/* Carrousel Button Responsive */
+/* Carrousel Button and Title Slides Responsive */
 @media (min-width: 320px) {
   .swiper-button-prev {
     left: 0px;
@@ -1032,6 +1023,10 @@ ion-icon {
   .swiper-button-next {
     right: 0px;
     margin-right: 20px;
+  }
+
+  .title {
+    max-width: 254px;
   }
 }
 
@@ -1059,7 +1054,6 @@ ion-icon {
   }
 }
 
-
 @media (min-width: 768px) {
   .swiper-button-prev {
     left: 0px;
@@ -1070,16 +1064,40 @@ ion-icon {
     right: 0px;
     margin-right: 120px;
   }
+
+  .title {
+    max-width: 492px;
+  }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .swiper-button-prev {
     left: 0px;
-    margin-left: 80px;
+    margin-left: 125px;
   }
 
   .swiper-button-next {
     right: 0px;
-    margin-right: 80px;
+    margin-right: 125px;
+  }
+
+  .title {
+    max-width: 730px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .swiper-button-prev {
+    left: 0px;
+    margin-left: 110px;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+    margin-right: 110px;
+  }
+
+  .title {
+    max-width: 1254px;
   }
 }
