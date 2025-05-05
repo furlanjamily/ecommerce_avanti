@@ -241,6 +241,8 @@ ion-icon {
 
 /* Banner Mobile */
 .img-banner-mobile {
+  padding-top: 16px;
+  padding-bottom: 56px;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -262,8 +264,9 @@ ion-icon {
 
 .title {
   max-width: 1182px;
-  display: flex;
+  justify-content: space-between;
   justify-items: flex-start;
+  background: red;
 }
 
 .title h1 {
@@ -271,6 +274,10 @@ ion-icon {
   font-weight: 700;
   text-align: left;
   width: 100%;
+}
+
+.see-more{
+  
 }
 
 .swiper {
@@ -411,17 +418,16 @@ ion-icon {
   box-shadow: 0px 0px 20px #005cff;
 }
 
-/* Alinhar a seta anterior ao início da .product-group */
+/* Alinhar a seta anterior ao início dos produtos*/
 .swiper-button-prev {
   left: 0px;
   margin-left: 110px;
 }
 
-/* Alinhar a seta próxima ao final da .product-group */
+/* Alinhar a seta próxima ao final dos produtos */
 .swiper-button-next {
   right: 0px;
   margin-right: 110px;
-
 }
 
 .swiper-button-prev::after {
@@ -1016,27 +1022,64 @@ ion-icon {
   }
 }
 
-/* Carrousel Responsive */
-@media (min-width: 640px) {
-  .product-item {
-    width: calc(50% - 8px); /* 2 por linha */
+/* Carrousel Button Responsive */
+@media (min-width: 320px) {
+  .swiper-button-prev {
+    left: 0px;
+    margin-left: 20px;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+    margin-right: 20px;
   }
 }
+
+@media (min-width: 375px) {
+  .swiper-button-prev {
+    left: 0px;
+    margin-left: 50px;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 425px) {
+  .swiper-button-prev {
+    left: 0px;
+    margin-left: 75px;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+    margin-right: 75px;
+  }
+}
+
 
 @media (min-width: 768px) {
-  .product-item {
-    width: calc(33.33% - 10.66px); /* 3 por linha */
+  .swiper-button-prev {
+    left: 0px;
+    margin-left: 120px;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+    margin-right: 120px;
   }
 }
 
-@media (min-width: 1024px) {
-  .product-item {
-    width: calc(25% - 12px); /* 4 por linha */
+@media (min-width: 1440px) {
+  .swiper-button-prev {
+    left: 0px;
+    margin-left: 80px;
   }
-}
 
-@media (min-width: 1280px) {
-  .product-item {
-    width: calc(20% - 12.8px); /* 5 por linha */
+  .swiper-button-next {
+    right: 0px;
+    margin-right: 80px;
   }
 }
